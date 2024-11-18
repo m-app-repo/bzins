@@ -103,7 +103,7 @@ def move_summary_sheet_to_front(fin_xl):
         wb.save(fin_xl)
 
 
-ses_tok ='49166619'
+ses_tok ='49190619'
 
 current_datetime = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 tmp_xl=f'{current_datetime}_trade_list.xlsx'
@@ -138,13 +138,4 @@ writer.close()
 move_summary_sheet_to_front(fin_xl)
 
 
-# fn_name='historical data'
-# tdate = datetime.datetime.now()
-# fdate = tdate - datetime.timedelta(days=1000)
-# expiry_date = datetime.date(2023, 3, 29)
-# tdate_iso = tdate.isoformat()[:10] + 'T05:30:00.000Z'
-# fdate_iso = fdate.isoformat()[:10] + 'T05:30:00.000Z'
-# stock_code='YESBAN'
-# exchange_code='NSE'
-# st_rec=bzins_con.secon(ses_tok,fn_name,start_date=fdate_iso,end_date=tdate_iso,stock_code=stock_code,exchange_code=exchange_code)
-# st_rec.to_excel(his_xl, index=False)
+

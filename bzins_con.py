@@ -13,21 +13,15 @@ from dateutil.relativedelta import relativedelta
 import logging
 
 def load_env_variables():
-    #dotenv_path = find_dotenv()
     load_dotenv(dotenv_path=".env")
     # Force reload the .env file
     env_values = dotenv_values(".env")
     os.environ.update(env_values)
     usr_slt = os.getenv("PHR")
     logging.info("usr_slt:PHR:  %s", usr_slt)
-    # lt_pr = seckey.create_encryption_key(lt_pr)
-    # print(lt_pr)
-    # usr_slt = seckey.decrypt_data(usr_slt,lt_pr)
-    # print(usr_slt)
     lt_pr=os.getenv("qt")
     logging.info("lt_pr: qt  %s", lt_pr)
-    #usr_slt = os.getenv("PHR")
-    #usr_slt="gAAAAABmcS1dzjpq2sodvebKdtC1AFTZQvDsmNVN8nWiFNjut8SChIsWd_2HGA5sd4CQqfdT5bIDexgt4E4IxGH0OmDXw8fpYg=="
+
     
     lt_pr = seckey.create_encryption_key(lt_pr)
     logging.info("lt_pr: converted  %s", lt_pr)
