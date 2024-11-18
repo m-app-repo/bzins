@@ -1,17 +1,17 @@
 
-### Steps to set up virtual env
+# Steps to set up virtual env
 
-# Create a new environment
+### Create a new environment
 python -m venv brics_venv
 
-# command to activate a python environment?
+### command to activate a python environment?
 .\brics_venv\Scripts\activate
 
-# Install the required packages
+### Install the required packages
 pip install -r requirements.txt
 
 
-### Steps for updating keys and token
+# Steps for updating keys and token
 
 1. Modify .env1 to .env
 2. Run the below to generate encryption keys for passphrase, apikey and apisecret
